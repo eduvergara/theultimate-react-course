@@ -1,26 +1,25 @@
 const PersonSkills = (props) => {
-  if (!props.showInformation || !props.showInformation.length) {
-    return null; // or a loading state
-  }
+  const skillList = props.showInformation[0].skills;
 
-  const skills = Object.entries(props.showInformation[0].skills);
-
-  function getRandomColor() {
-    var letters = "0123456789ABCDEF";
-    var color = "#";
-    for (var i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  }
-
-  return skills.map(([skill, emoji]) => (
+  // Map over the skillList array, creating a span element for each skill
+  // and Display an emoji based on the skill level
+  return skillList.map((skill) => (
     <span
+      // Assign the class "skill" to each span element
       className="skill"
-      style={{ backgroundColor: getRandomColor() }}
-      key={skill}
+      // Set the background color of the span to the color property of the current skill
+      style={{ backgroundColor: skill.color }}
+      // Use the skill name as the unique key for each span element
+      key={skill.skill}
     >
-      {skill} {emoji}
+      {skill.skill}
+      {skill.level === "advanced"
+        ? " 👩‍💻 "
+        : skill.level === "intermediate"
+        ? " 🤭 "
+        : skill.level === "beginner"
+        ? " 😂 "
+        : ""}
     </span>
   ));
 };

@@ -3,16 +3,30 @@
     {
       "id": "1",
       "name": "Eduardo Vergara",
-      "content": "Graduate developer ready to kickstart a dynamic career with a love for lifelong learning! As a highly motivated professional with a Master's in Information Technology, specialising in Software Design and Development and Data Science, and a Bachelor's degree in Engineering Science, majoring in Sound and Acoustics.",
+      "content": "Graduate developer ready to kickstart a dynamic career with a love for lifelong learning! Highly motivated professional with a Master's in Information Technology, specialising in Software Design and Development and Data Science, and a Bachelor's degree in Engineering Science, majoring in Sound and Acoustics.",
       "picture": "img/edu.jpeg",
-      "skills": {
-        "Java": "😊",
-        "Spring Boot": "🤭",
-        "Python": "🤫",
-        "Databases": "🤭",
-        "React": "🤫",
-        "Web Design": "🤫"
-      }
+      "skills": [
+        {
+          "skill": "React",
+          "level": "beginner",
+          "color": "#FF3800"
+        },
+        {
+          "skill": "Java",
+          "level": "advanced",
+          "color": "#B5ADC9"
+        },
+        {
+          "skill": "Git",
+          "level": "beginner",
+          "color": "#60DAFB"
+        },
+        {
+          "skill": "Web-Dev",
+          "level": "intermediate",
+          "color": "#C3DCAF"
+        }
+      ]
     }
   ]
 }
